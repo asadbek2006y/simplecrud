@@ -1,0 +1,7 @@
+{
+  "timestamp": "2024-11-08T07:18:49.380+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "Surname already exists",
+  "path": "/api/v1/student"
+}

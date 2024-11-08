@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="52b4bd35-a35d-4ebe-9d2e-c4b05964c929" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/86b53f67-faa5-473b-a208-83504f21f882.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/86b53f67-faa5-473b-a208-83504f21f882/storage_v2/_src_/database/postgres.edMnLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/86b53f67-faa5-473b-a208-83504f21f882/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/86b53f67-faa5-473b-a208-83504f21f882/storage_v2/_src_/database/studentmanagement.vqyvMg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/86b53f67-faa5-473b-a208-83504f21f882/storage_v2/_src_/database/studentmanagement.vqyvMg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/86b53f67-faa5-473b-a208-83504f21f882/storage_v2/_src_/database/studentmanagement.vqyvMg/schema/information_schema.FNRwLQ.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/86b53f67-faa5-473b-a208-83504f21f882/storage_v2/_src_/database/studentmanagement.vqyvMg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/86b53f67-faa5-473b-a208-83504f21f882/storage_v2/_src_/database/studentmanagement.vqyvMg/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/86b53f67-faa5-473b-a208-83504f21f882/storage_v2/_src_/database/studentmanagement.vqyvMg/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpClient.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T114640.405.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T115641.405.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T115651.405.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T115754.405.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T120008.400.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T120008.405.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T121849.500.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T122612.404.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T122618.404.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T122623.404.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T123004.500.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T124105.405.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T124229.405.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T124240.405.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T124246.405.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T124341.405.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-11-08T124412.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2oYLoazec6v3MGpC7jTbNYx6usC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "HTTP Request.All in generated-requests.executor": "Run",
+    "HTTP Request.generated-requests | #1.executor": "Run",
+    "HTTP Request.generated-requests | #2.executor": "Run",
+    "Maven.simplecrud [install].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.SimplecrudApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.log",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "oracle",
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.SimplecrudApplication">
+    <configuration name="All in generated-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="SimplecrudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="simplecrud" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.otabekov.simplecrud.SimplecrudApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.generated-requests | #2" />
+        <item itemvalue="HTTP Request.generated-requests | #1" />
+        <item itemvalue="HTTP Request.All in generated-requests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="52b4bd35-a35d-4ebe-9d2e-c4b05964c929" name="Changes" comment="" />
+      <created>1731041742911</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731041742911</updated>
+      <workItem from="1731041743950" duration="9161000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

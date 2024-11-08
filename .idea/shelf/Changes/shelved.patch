@@ -1,0 +1,888 @@
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+new file mode 100644
+--- /dev/null	(date 1731044244291)
++++ b/pom.xml	(date 1731044244291)
+@@ -0,0 +1,64 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++    <parent>
++        <groupId>org.springframework.boot</groupId>
++        <artifactId>spring-boot-starter-parent</artifactId>
++        <version>3.3.5</version>
++        <relativePath/> <!-- lookup parent from repository -->
++    </parent>
++    <groupId>com.otabekov</groupId>
++    <artifactId>simplecrud</artifactId>
++    <version>0.0.1-SNAPSHOT</version>
++    <name>simplecrud</name>
++    <description>simplecrud</description>
++    <url/>
++    <licenses>
++        <license/>
++    </licenses>
++    <developers>
++        <developer/>
++    </developers>
++    <scm>
++        <connection/>
++        <developerConnection/>
++        <tag/>
++        <url/>
++    </scm>
++    <properties>
++        <java.version>23</java.version>
++    </properties>
++    <dependencies>
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-web</artifactId>
++        </dependency>
++
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-test</artifactId>
++            <scope>test</scope>
++        </dependency>
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-data-jpa</artifactId>
++        </dependency>
++        <dependency>
++            <groupId>org.postgresql</groupId>
++            <artifactId>postgresql</artifactId>
++            <version>42.7.4</version> <!-- Use the latest version available -->
++        </dependency>
++
++    </dependencies>
++
++    <build>
++        <plugins>
++            <plugin>
++                <groupId>org.springframework.boot</groupId>
++                <artifactId>spring-boot-maven-plugin</artifactId>
++            </plugin>
++        </plugins>
++    </build>
++
++</project>
+Index: .gitattributes
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitattributes b/.gitattributes
+new file mode 100644
+--- /dev/null	(date 1731041737202)
++++ b/.gitattributes	(date 1731041737202)
+@@ -0,0 +1,2 @@
++/mvnw text eol=lf
++*.cmd text eol=crlf
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+--- /dev/null	(date 1731041737197)
++++ b/.gitignore	(date 1731041737197)
+@@ -0,0 +1,33 @@
++HELP.md
++target/
++!.mvn/wrapper/maven-wrapper.jar
++!**/src/main/**/target/
++!**/src/test/**/target/
++
++### STS ###
++.apt_generated
++.classpath
++.factorypath
++.project
++.settings
++.springBeans
++.sts4-cache
++
++### IntelliJ IDEA ###
++.idea
++*.iws
++*.iml
++*.ipr
++
++### NetBeans ###
++/nbproject/private/
++/nbbuild/
++/dist/
++/nbdist/
++/.nb-gradle/
++build/
++!**/src/main/**/build/
++!**/src/test/**/build/
++
++### VS Code ###
++.vscode/
+Index: mvnw
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/mvnw b/mvnw
+new file mode 100644
+--- /dev/null	(date 1731041737212)
++++ b/mvnw	(date 1731041737212)
+@@ -0,0 +1,259 @@
++#!/bin/sh
++# ----------------------------------------------------------------------------
++# Licensed to the Apache Software Foundation (ASF) under one
++# or more contributor license agreements.  See the NOTICE file
++# distributed with this work for additional information
++# regarding copyright ownership.  The ASF licenses this file
++# to you under the Apache License, Version 2.0 (the
++# "License"); you may not use this file except in compliance
++# with the License.  You may obtain a copy of the License at
++#
++#    http://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing,
++# software distributed under the License is distributed on an
++# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
++# KIND, either express or implied.  See the License for the
++# specific language governing permissions and limitations
++# under the License.
++# ----------------------------------------------------------------------------
++
++# ----------------------------------------------------------------------------
++# Apache Maven Wrapper startup batch script, version 3.3.2
++#
++# Optional ENV vars
++# -----------------
++#   JAVA_HOME - location of a JDK home dir, required when download maven via java source
++#   MVNW_REPOURL - repo url base for downloading maven distribution
++#   MVNW_USERNAME/MVNW_PASSWORD - user and password for downloading maven
++#   MVNW_VERBOSE - true: enable verbose log; debug: trace the mvnw script; others: silence the output
++# ----------------------------------------------------------------------------
++
++set -euf
++[ "${MVNW_VERBOSE-}" != debug ] || set -x
++
++# OS specific support.
++native_path() { printf %s\\n "$1"; }
++case "$(uname)" in
++CYGWIN* | MINGW*)
++  [ -z "${JAVA_HOME-}" ] || JAVA_HOME="$(cygpath --unix "$JAVA_HOME")"
++  native_path() { cygpath --path --windows "$1"; }
++  ;;
++esac
++
++# set JAVACMD and JAVACCMD
++set_java_home() {
++  # For Cygwin and MinGW, ensure paths are in Unix format before anything is touched
++  if [ -n "${JAVA_HOME-}" ]; then
++    if [ -x "$JAVA_HOME/jre/sh/java" ]; then
++      # IBM's JDK on AIX uses strange locations for the executables
++      JAVACMD="$JAVA_HOME/jre/sh/java"
++      JAVACCMD="$JAVA_HOME/jre/sh/javac"
++    else
++      JAVACMD="$JAVA_HOME/bin/java"
++      JAVACCMD="$JAVA_HOME/bin/javac"
++
++      if [ ! -x "$JAVACMD" ] || [ ! -x "$JAVACCMD" ]; then
++        echo "The JAVA_HOME environment variable is not defined correctly, so mvnw cannot run." >&2
++        echo "JAVA_HOME is set to \"$JAVA_HOME\", but \"\$JAVA_HOME/bin/java\" or \"\$JAVA_HOME/bin/javac\" does not exist." >&2
++        return 1
++      fi
++    fi
++  else
++    JAVACMD="$(
++      'set' +e
++      'unset' -f command 2>/dev/null
++      'command' -v java
++    )" || :
++    JAVACCMD="$(
++      'set' +e
++      'unset' -f command 2>/dev/null
++      'command' -v javac
++    )" || :
++
++    if [ ! -x "${JAVACMD-}" ] || [ ! -x "${JAVACCMD-}" ]; then
++      echo "The java/javac command does not exist in PATH nor is JAVA_HOME set, so mvnw cannot run." >&2
++      return 1
++    fi
++  fi
++}
++
++# hash string like Java String::hashCode
++hash_string() {
++  str="${1:-}" h=0
++  while [ -n "$str" ]; do
++    char="${str%"${str#?}"}"
++    h=$(((h * 31 + $(LC_CTYPE=C printf %d "'$char")) % 4294967296))
++    str="${str#?}"
++  done
++  printf %x\\n $h
++}
++
++verbose() { :; }
++[ "${MVNW_VERBOSE-}" != true ] || verbose() { printf %s\\n "${1-}"; }
++
++die() {
++  printf %s\\n "$1" >&2
++  exit 1
++}
++
++trim() {
++  # MWRAPPER-139:
++  #   Trims trailing and leading whitespace, carriage returns, tabs, and linefeeds.
++  #   Needed for removing poorly interpreted newline sequences when running in more
++  #   exotic environments such as mingw bash on Windows.
++  printf "%s" "${1}" | tr -d '[:space:]'
++}
++
++# parse distributionUrl and optional distributionSha256Sum, requires .mvn/wrapper/maven-wrapper.properties
++while IFS="=" read -r key value; do
++  case "${key-}" in
++  distributionUrl) distributionUrl=$(trim "${value-}") ;;
++  distributionSha256Sum) distributionSha256Sum=$(trim "${value-}") ;;
++  esac
++done <"${0%/*}/.mvn/wrapper/maven-wrapper.properties"
++[ -n "${distributionUrl-}" ] || die "cannot read distributionUrl property in ${0%/*}/.mvn/wrapper/maven-wrapper.properties"
++
++case "${distributionUrl##*/}" in
++maven-mvnd-*bin.*)
++  MVN_CMD=mvnd.sh _MVNW_REPO_PATTERN=/maven/mvnd/
++  case "${PROCESSOR_ARCHITECTURE-}${PROCESSOR_ARCHITEW6432-}:$(uname -a)" in
++  *AMD64:CYGWIN* | *AMD64:MINGW*) distributionPlatform=windows-amd64 ;;
++  :Darwin*x86_64) distributionPlatform=darwin-amd64 ;;
++  :Darwin*arm64) distributionPlatform=darwin-aarch64 ;;
++  :Linux*x86_64*) distributionPlatform=linux-amd64 ;;
++  *)
++    echo "Cannot detect native platform for mvnd on $(uname)-$(uname -m), use pure java version" >&2
++    distributionPlatform=linux-amd64
++    ;;
++  esac
++  distributionUrl="${distributionUrl%-bin.*}-$distributionPlatform.zip"
++  ;;
++maven-mvnd-*) MVN_CMD=mvnd.sh _MVNW_REPO_PATTERN=/maven/mvnd/ ;;
++*) MVN_CMD="mvn${0##*/mvnw}" _MVNW_REPO_PATTERN=/org/apache/maven/ ;;
++esac
++
++# apply MVNW_REPOURL and calculate MAVEN_HOME
++# maven home pattern: ~/.m2/wrapper/dists/{apache-maven-<version>,maven-mvnd-<version>-<platform>}/<hash>
++[ -z "${MVNW_REPOURL-}" ] || distributionUrl="$MVNW_REPOURL$_MVNW_REPO_PATTERN${distributionUrl#*"$_MVNW_REPO_PATTERN"}"
++distributionUrlName="${distributionUrl##*/}"
++distributionUrlNameMain="${distributionUrlName%.*}"
++distributionUrlNameMain="${distributionUrlNameMain%-bin}"
++MAVEN_USER_HOME="${MAVEN_USER_HOME:-${HOME}/.m2}"
++MAVEN_HOME="${MAVEN_USER_HOME}/wrapper/dists/${distributionUrlNameMain-}/$(hash_string "$distributionUrl")"
++
++exec_maven() {
++  unset MVNW_VERBOSE MVNW_USERNAME MVNW_PASSWORD MVNW_REPOURL || :
++  exec "$MAVEN_HOME/bin/$MVN_CMD" "$@" || die "cannot exec $MAVEN_HOME/bin/$MVN_CMD"
++}
++
++if [ -d "$MAVEN_HOME" ]; then
++  verbose "found existing MAVEN_HOME at $MAVEN_HOME"
++  exec_maven "$@"
++fi
++
++case "${distributionUrl-}" in
++*?-bin.zip | *?maven-mvnd-?*-?*.zip) ;;
++*) die "distributionUrl is not valid, must match *-bin.zip or maven-mvnd-*.zip, but found '${distributionUrl-}'" ;;
++esac
++
++# prepare tmp dir
++if TMP_DOWNLOAD_DIR="$(mktemp -d)" && [ -d "$TMP_DOWNLOAD_DIR" ]; then
++  clean() { rm -rf -- "$TMP_DOWNLOAD_DIR"; }
++  trap clean HUP INT TERM EXIT
++else
++  die "cannot create temp dir"
++fi
++
++mkdir -p -- "${MAVEN_HOME%/*}"
++
++# Download and Install Apache Maven
++verbose "Couldn't find MAVEN_HOME, downloading and installing it ..."
++verbose "Downloading from: $distributionUrl"
++verbose "Downloading to: $TMP_DOWNLOAD_DIR/$distributionUrlName"
++
++# select .zip or .tar.gz
++if ! command -v unzip >/dev/null; then
++  distributionUrl="${distributionUrl%.zip}.tar.gz"
++  distributionUrlName="${distributionUrl##*/}"
++fi
++
++# verbose opt
++__MVNW_QUIET_WGET=--quiet __MVNW_QUIET_CURL=--silent __MVNW_QUIET_UNZIP=-q __MVNW_QUIET_TAR=''
++[ "${MVNW_VERBOSE-}" != true ] || __MVNW_QUIET_WGET='' __MVNW_QUIET_CURL='' __MVNW_QUIET_UNZIP='' __MVNW_QUIET_TAR=v
++
++# normalize http auth
++case "${MVNW_PASSWORD:+has-password}" in
++'') MVNW_USERNAME='' MVNW_PASSWORD='' ;;
++has-password) [ -n "${MVNW_USERNAME-}" ] || MVNW_USERNAME='' MVNW_PASSWORD='' ;;
++esac
++
++if [ -z "${MVNW_USERNAME-}" ] && command -v wget >/dev/null; then
++  verbose "Found wget ... using wget"
++  wget ${__MVNW_QUIET_WGET:+"$__MVNW_QUIET_WGET"} "$distributionUrl" -O "$TMP_DOWNLOAD_DIR/$distributionUrlName" || die "wget: Failed to fetch $distributionUrl"
++elif [ -z "${MVNW_USERNAME-}" ] && command -v curl >/dev/null; then
++  verbose "Found curl ... using curl"
++  curl ${__MVNW_QUIET_CURL:+"$__MVNW_QUIET_CURL"} -f -L -o "$TMP_DOWNLOAD_DIR/$distributionUrlName" "$distributionUrl" || die "curl: Failed to fetch $distributionUrl"
++elif set_java_home; then
++  verbose "Falling back to use Java to download"
++  javaSource="$TMP_DOWNLOAD_DIR/Downloader.java"
++  targetZip="$TMP_DOWNLOAD_DIR/$distributionUrlName"
++  cat >"$javaSource" <<-END
++	public class Downloader extends java.net.Authenticator
++	{
++	  protected java.net.PasswordAuthentication getPasswordAuthentication()
++	  {
++	    return new java.net.PasswordAuthentication( System.getenv( "MVNW_USERNAME" ), System.getenv( "MVNW_PASSWORD" ).toCharArray() );
++	  }
++	  public static void main( String[] args ) throws Exception
++	  {
++	    setDefault( new Downloader() );
++	    java.nio.file.Files.copy( java.net.URI.create( args[0] ).toURL().openStream(), java.nio.file.Paths.get( args[1] ).toAbsolutePath().normalize() );
++	  }
++	}
++	END
++  # For Cygwin/MinGW, switch paths to Windows format before running javac and java
++  verbose " - Compiling Downloader.java ..."
++  "$(native_path "$JAVACCMD")" "$(native_path "$javaSource")" || die "Failed to compile Downloader.java"
++  verbose " - Running Downloader.java ..."
++  "$(native_path "$JAVACMD")" -cp "$(native_path "$TMP_DOWNLOAD_DIR")" Downloader "$distributionUrl" "$(native_path "$targetZip")"
++fi
++
++# If specified, validate the SHA-256 sum of the Maven distribution zip file
++if [ -n "${distributionSha256Sum-}" ]; then
++  distributionSha256Result=false
++  if [ "$MVN_CMD" = mvnd.sh ]; then
++    echo "Checksum validation is not supported for maven-mvnd." >&2
++    echo "Please disable validation by removing 'distributionSha256Sum' from your maven-wrapper.properties." >&2
++    exit 1
++  elif command -v sha256sum >/dev/null; then
++    if echo "$distributionSha256Sum  $TMP_DOWNLOAD_DIR/$distributionUrlName" | sha256sum -c >/dev/null 2>&1; then
++      distributionSha256Result=true
++    fi
++  elif command -v shasum >/dev/null; then
++    if echo "$distributionSha256Sum  $TMP_DOWNLOAD_DIR/$distributionUrlName" | shasum -a 256 -c >/dev/null 2>&1; then
++      distributionSha256Result=true
++    fi
++  else
++    echo "Checksum validation was requested but neither 'sha256sum' or 'shasum' are available." >&2
++    echo "Please install either command, or disable validation by removing 'distributionSha256Sum' from your maven-wrapper.properties." >&2
++    exit 1
++  fi
++  if [ $distributionSha256Result = false ]; then
++    echo "Error: Failed to validate Maven distribution SHA-256, your Maven distribution might be compromised." >&2
++    echo "If you updated your Maven version, you need to update the specified distributionSha256Sum property." >&2
++    exit 1
++  fi
++fi
++
++# unzip and move
++if command -v unzip >/dev/null; then
++  unzip ${__MVNW_QUIET_UNZIP:+"$__MVNW_QUIET_UNZIP"} "$TMP_DOWNLOAD_DIR/$distributionUrlName" -d "$TMP_DOWNLOAD_DIR" || die "failed to unzip"
++else
++  tar xzf${__MVNW_QUIET_TAR:+"$__MVNW_QUIET_TAR"} "$TMP_DOWNLOAD_DIR/$distributionUrlName" -C "$TMP_DOWNLOAD_DIR" || die "failed to untar"
++fi
++printf %s\\n "$distributionUrl" >"$TMP_DOWNLOAD_DIR/$distributionUrlNameMain/mvnw.url"
++mv -- "$TMP_DOWNLOAD_DIR/$distributionUrlNameMain" "$MAVEN_HOME" || [ -d "$MAVEN_HOME" ] || die "fail to move MAVEN_HOME"
++
++clean || :
++exec_maven "$@"
+Index: mvnw.cmd
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/mvnw.cmd b/mvnw.cmd
+new file mode 100644
+--- /dev/null	(date 1731041737207)
++++ b/mvnw.cmd	(date 1731041737207)
+@@ -0,0 +1,149 @@
++<# : batch portion
++@REM ----------------------------------------------------------------------------
++@REM Licensed to the Apache Software Foundation (ASF) under one
++@REM or more contributor license agreements.  See the NOTICE file
++@REM distributed with this work for additional information
++@REM regarding copyright ownership.  The ASF licenses this file
++@REM to you under the Apache License, Version 2.0 (the
++@REM "License"); you may not use this file except in compliance
++@REM with the License.  You may obtain a copy of the License at
++@REM
++@REM    http://www.apache.org/licenses/LICENSE-2.0
++@REM
++@REM Unless required by applicable law or agreed to in writing,
++@REM software distributed under the License is distributed on an
++@REM "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
++@REM KIND, either express or implied.  See the License for the
++@REM specific language governing permissions and limitations
++@REM under the License.
++@REM ----------------------------------------------------------------------------
++
++@REM ----------------------------------------------------------------------------
++@REM Apache Maven Wrapper startup batch script, version 3.3.2
++@REM
++@REM Optional ENV vars
++@REM   MVNW_REPOURL - repo url base for downloading maven distribution
++@REM   MVNW_USERNAME/MVNW_PASSWORD - user and password for downloading maven
++@REM   MVNW_VERBOSE - true: enable verbose log; others: silence the output
++@REM ----------------------------------------------------------------------------
++
++@IF "%__MVNW_ARG0_NAME__%"=="" (SET __MVNW_ARG0_NAME__=%~nx0)
++@SET __MVNW_CMD__=
++@SET __MVNW_ERROR__=
++@SET __MVNW_PSMODULEP_SAVE=%PSModulePath%
++@SET PSModulePath=
++@FOR /F "usebackq tokens=1* delims==" %%A IN (`powershell -noprofile "& {$scriptDir='%~dp0'; $script='%__MVNW_ARG0_NAME__%'; icm -ScriptBlock ([Scriptblock]::Create((Get-Content -Raw '%~f0'))) -NoNewScope}"`) DO @(
++  IF "%%A"=="MVN_CMD" (set __MVNW_CMD__=%%B) ELSE IF "%%B"=="" (echo %%A) ELSE (echo %%A=%%B)
++)
++@SET PSModulePath=%__MVNW_PSMODULEP_SAVE%
++@SET __MVNW_PSMODULEP_SAVE=
++@SET __MVNW_ARG0_NAME__=
++@SET MVNW_USERNAME=
++@SET MVNW_PASSWORD=
++@IF NOT "%__MVNW_CMD__%"=="" (%__MVNW_CMD__% %*)
++@echo Cannot start maven from wrapper >&2 && exit /b 1
++@GOTO :EOF
++: end batch / begin powershell #>
++
++$ErrorActionPreference = "Stop"
++if ($env:MVNW_VERBOSE -eq "true") {
++  $VerbosePreference = "Continue"
++}
++
++# calculate distributionUrl, requires .mvn/wrapper/maven-wrapper.properties
++$distributionUrl = (Get-Content -Raw "$scriptDir/.mvn/wrapper/maven-wrapper.properties" | ConvertFrom-StringData).distributionUrl
++if (!$distributionUrl) {
++  Write-Error "cannot read distributionUrl property in $scriptDir/.mvn/wrapper/maven-wrapper.properties"
++}
++
++switch -wildcard -casesensitive ( $($distributionUrl -replace '^.*/','') ) {
++  "maven-mvnd-*" {
++    $USE_MVND = $true
++    $distributionUrl = $distributionUrl -replace '-bin\.[^.]*$',"-windows-amd64.zip"
++    $MVN_CMD = "mvnd.cmd"
++    break
++  }
++  default {
++    $USE_MVND = $false
++    $MVN_CMD = $script -replace '^mvnw','mvn'
++    break
++  }
++}
++
++# apply MVNW_REPOURL and calculate MAVEN_HOME
++# maven home pattern: ~/.m2/wrapper/dists/{apache-maven-<version>,maven-mvnd-<version>-<platform>}/<hash>
++if ($env:MVNW_REPOURL) {
++  $MVNW_REPO_PATTERN = if ($USE_MVND) { "/org/apache/maven/" } else { "/maven/mvnd/" }
++  $distributionUrl = "$env:MVNW_REPOURL$MVNW_REPO_PATTERN$($distributionUrl -replace '^.*'+$MVNW_REPO_PATTERN,'')"
++}
++$distributionUrlName = $distributionUrl -replace '^.*/',''
++$distributionUrlNameMain = $distributionUrlName -replace '\.[^.]*$','' -replace '-bin$',''
++$MAVEN_HOME_PARENT = "$HOME/.m2/wrapper/dists/$distributionUrlNameMain"
++if ($env:MAVEN_USER_HOME) {
++  $MAVEN_HOME_PARENT = "$env:MAVEN_USER_HOME/wrapper/dists/$distributionUrlNameMain"
++}
++$MAVEN_HOME_NAME = ([System.Security.Cryptography.MD5]::Create().ComputeHash([byte[]][char[]]$distributionUrl) | ForEach-Object {$_.ToString("x2")}) -join ''
++$MAVEN_HOME = "$MAVEN_HOME_PARENT/$MAVEN_HOME_NAME"
++
++if (Test-Path -Path "$MAVEN_HOME" -PathType Container) {
++  Write-Verbose "found existing MAVEN_HOME at $MAVEN_HOME"
++  Write-Output "MVN_CMD=$MAVEN_HOME/bin/$MVN_CMD"
++  exit $?
++}
++
++if (! $distributionUrlNameMain -or ($distributionUrlName -eq $distributionUrlNameMain)) {
++  Write-Error "distributionUrl is not valid, must end with *-bin.zip, but found $distributionUrl"
++}
++
++# prepare tmp dir
++$TMP_DOWNLOAD_DIR_HOLDER = New-TemporaryFile
++$TMP_DOWNLOAD_DIR = New-Item -Itemtype Directory -Path "$TMP_DOWNLOAD_DIR_HOLDER.dir"
++$TMP_DOWNLOAD_DIR_HOLDER.Delete() | Out-Null
++trap {
++  if ($TMP_DOWNLOAD_DIR.Exists) {
++    try { Remove-Item $TMP_DOWNLOAD_DIR -Recurse -Force | Out-Null }
++    catch { Write-Warning "Cannot remove $TMP_DOWNLOAD_DIR" }
++  }
++}
++
++New-Item -Itemtype Directory -Path "$MAVEN_HOME_PARENT" -Force | Out-Null
++
++# Download and Install Apache Maven
++Write-Verbose "Couldn't find MAVEN_HOME, downloading and installing it ..."
++Write-Verbose "Downloading from: $distributionUrl"
++Write-Verbose "Downloading to: $TMP_DOWNLOAD_DIR/$distributionUrlName"
++
++$webclient = New-Object System.Net.WebClient
++if ($env:MVNW_USERNAME -and $env:MVNW_PASSWORD) {
++  $webclient.Credentials = New-Object System.Net.NetworkCredential($env:MVNW_USERNAME, $env:MVNW_PASSWORD)
++}
++[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
++$webclient.DownloadFile($distributionUrl, "$TMP_DOWNLOAD_DIR/$distributionUrlName") | Out-Null
++
++# If specified, validate the SHA-256 sum of the Maven distribution zip file
++$distributionSha256Sum = (Get-Content -Raw "$scriptDir/.mvn/wrapper/maven-wrapper.properties" | ConvertFrom-StringData).distributionSha256Sum
++if ($distributionSha256Sum) {
++  if ($USE_MVND) {
++    Write-Error "Checksum validation is not supported for maven-mvnd. `nPlease disable validation by removing 'distributionSha256Sum' from your maven-wrapper.properties."
++  }
++  Import-Module $PSHOME\Modules\Microsoft.PowerShell.Utility -Function Get-FileHash
++  if ((Get-FileHash "$TMP_DOWNLOAD_DIR/$distributionUrlName" -Algorithm SHA256).Hash.ToLower() -ne $distributionSha256Sum) {
++    Write-Error "Error: Failed to validate Maven distribution SHA-256, your Maven distribution might be compromised. If you updated your Maven version, you need to update the specified distributionSha256Sum property."
++  }
++}
++
++# unzip and move
++Expand-Archive "$TMP_DOWNLOAD_DIR/$distributionUrlName" -DestinationPath "$TMP_DOWNLOAD_DIR" | Out-Null
++Rename-Item -Path "$TMP_DOWNLOAD_DIR/$distributionUrlNameMain" -NewName $MAVEN_HOME_NAME | Out-Null
++try {
++  Move-Item -Path "$TMP_DOWNLOAD_DIR/$MAVEN_HOME_NAME" -Destination $MAVEN_HOME_PARENT | Out-Null
++} catch {
++  if (! (Test-Path -Path "$MAVEN_HOME" -PathType Container)) {
++    Write-Error "fail to move MAVEN_HOME"
++  }
++} finally {
++  try { Remove-Item $TMP_DOWNLOAD_DIR -Recurse -Force | Out-Null }
++  catch { Write-Warning "Cannot remove $TMP_DOWNLOAD_DIR" }
++}
++
++Write-Output "MVN_CMD=$MAVEN_HOME/bin/$MVN_CMD"
+Index: src/main/java/com/otabekov/simplecrud/reposistory/StudentReposistory.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/otabekov/simplecrud/reposistory/StudentReposistory.java b/src/main/java/com/otabekov/simplecrud/reposistory/StudentReposistory.java
+new file mode 100644
+--- /dev/null	(date 1731050132211)
++++ b/src/main/java/com/otabekov/simplecrud/reposistory/StudentReposistory.java	(date 1731050132211)
+@@ -0,0 +1,14 @@
++package com.otabekov.simplecrud.reposistory;
++
++import com.otabekov.simplecrud.model.Student;
++import org.springframework.data.jpa.repository.JpaRepository;
++import org.springframework.data.jpa.repository.Query;
++import org.springframework.stereotype.Repository;
++
++import java.util.Optional;
++
++@Repository
++public interface StudentReposistory extends JpaRepository<Student, Long> {
++    @Query("SELECT s FROM Student s WHERE s.surname = ?1")
++    Optional<Student> findStudentBySurname(String surname);
++}
+Index: src/main/java/com/otabekov/simplecrud/Config/SudentConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/otabekov/simplecrud/Config/SudentConfig.java b/src/main/java/com/otabekov/simplecrud/Config/SudentConfig.java
+new file mode 100644
+--- /dev/null	(date 1731048039987)
++++ b/src/main/java/com/otabekov/simplecrud/Config/SudentConfig.java	(date 1731048039987)
+@@ -0,0 +1,26 @@
++package com.otabekov.simplecrud.Config;
++
++import com.otabekov.simplecrud.model.Student;
++import com.otabekov.simplecrud.reposistory.StudentReposistory;
++import org.springframework.boot.CommandLineRunner;
++import org.springframework.context.annotation.Bean;
++import org.springframework.context.annotation.Configuration;
++
++import java.time.LocalDate;
++import java.time.Month;
++import java.util.List;
++
++@Configuration
++public class SudentConfig {
++    @Bean
++    CommandLineRunner runner(StudentReposistory studentReposistory) {
++        return args -> {
++            Student mairam = new Student(1L,"Asadbek","Otabekov", LocalDate.of(2006, Month.JANUARY,22));
++            Student jasur = new Student(2L,"Asadbek","Egamberdiev",LocalDate.of(2002, Month.JANUARY,22));
++            Student Ozod = new Student(3L,"Ozod","Egamberdiev",LocalDate.of(2003, Month.JANUARY,22));
++            studentReposistory.saveAll(
++                    List.of(mairam, jasur, Ozod)
++            );
++        };
++    }
++}
+Index: src/main/java/com/otabekov/simplecrud/SimplecrudApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/otabekov/simplecrud/SimplecrudApplication.java b/src/main/java/com/otabekov/simplecrud/SimplecrudApplication.java
+new file mode 100644
+--- /dev/null	(date 1731042584540)
++++ b/src/main/java/com/otabekov/simplecrud/SimplecrudApplication.java	(date 1731042584540)
+@@ -0,0 +1,15 @@
++package com.otabekov.simplecrud;
++
++import org.springframework.boot.SpringApplication;
++import org.springframework.boot.autoconfigure.SpringBootApplication;
++import org.springframework.web.bind.annotation.GetMapping;
++import org.springframework.web.bind.annotation.RestController;
++
++@SpringBootApplication
++public class SimplecrudApplication {
++
++    public static void main(String[] args) {
++        SpringApplication.run(SimplecrudApplication.class, args);
++    }
++
++}
+Index: src/main/java/com/otabekov/simplecrud/Controller/StudentController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/otabekov/simplecrud/Controller/StudentController.java b/src/main/java/com/otabekov/simplecrud/Controller/StudentController.java
+new file mode 100644
+--- /dev/null	(date 1731051839840)
++++ b/src/main/java/com/otabekov/simplecrud/Controller/StudentController.java	(date 1731051839840)
+@@ -0,0 +1,37 @@
++package com.otabekov.simplecrud.Controller;
++
++import com.otabekov.simplecrud.model.Student;
++import com.otabekov.simplecrud.service.StudentService;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.web.bind.annotation.*;
++
++import java.util.List;
++
++@RestController
++@RequestMapping(path = "/api/v1/student")
++public class StudentController {
++    private final StudentService studentService;
++
++    @Autowired
++    public StudentController(StudentService studentService) {
++        this.studentService = studentService;
++    }
++
++    @GetMapping
++    public List<Student> getStudents() {
++        return studentService.getAllStudents();
++    }
++    @PostMapping
++    public void registerStudent(@RequestBody Student student) {
++        studentService.addNewStudent(student);
++    }
++    @DeleteMapping(path = "{studentId}")
++    public void deleteStudent(@PathVariable("studentId") Long studentId) {
++        studentService.deleteStudent(studentId);
++    }
++    @PutMapping(path = "{studentId}")
++    public Student updateStudent(@PathVariable Long studentId, @RequestBody Student ustudent) {
++        return studentService.updateStudent(studentId,ustudent);
++    }
++
++}
+Index: src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+new file mode 100644
+--- /dev/null	(date 1731050274747)
++++ b/src/main/resources/application.properties	(date 1731050274747)
+@@ -0,0 +1,10 @@
++spring.application.name=simplecrud
++spring.datasource.url=jdbc:postgresql://localhost:5432/studentmanagement
++spring.datasource.username=postgres
++spring.datasource.password=root
++spring.jpa.hibernate.ddl-auto=create-drop
++spring.jpa.show-sql=true
++spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
++spring.jpa.properties.hibernate.format_sql=true
++
++server.error.include-message=always
+\ No newline at end of file
+Index: src/main/java/com/otabekov/simplecrud/model/Student.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/otabekov/simplecrud/model/Student.java b/src/main/java/com/otabekov/simplecrud/model/Student.java
+new file mode 100644
+--- /dev/null	(date 1731048119228)
++++ b/src/main/java/com/otabekov/simplecrud/model/Student.java	(date 1731048119228)
+@@ -0,0 +1,56 @@
++package com.otabekov.simplecrud.model;
++
++import jakarta.persistence.*;
++
++import java.time.LocalDate;
++import java.time.Period;
++
++
++@Entity
++@Table
++public class Student {
++    @Id
++    @SequenceGenerator(
++            name = "student_sequence",
++            sequenceName = "student_sequence",
++            allocationSize = 1
++    )
++    @GeneratedValue(
++            strategy = GenerationType.SEQUENCE,
++            generator = "student_sequence"
++    )
++    private Long id;
++    private String name;
++    private String surname;
++    private LocalDate dob;
++
++
++    @Transient
++    private Integer age;
++    public Student(Long id, String name, String surname, LocalDate dob) {
++        this.id = id;
++        this.name = name;
++        this.surname = surname;
++        this.dob = dob;
++    }
++
++    public Student() {
++
++    }
++
++
++    public Long getId() {return id;}
++    public void setId(Long id) {this.id = id;}
++    public String getName() {return name;}
++    public void setName(String name) {this.name = name;}
++    public String getSurname() {return surname;}
++    public void setSurname(String surname) {this.surname = surname;}
++    public int getAge() {
++        return Period.between(dob, LocalDate.now()).getYears();
++//        return Period.between(birthDate, LocalDate.of());
++    }
++    public void setAge(int age) {this.age = age;}
++    public LocalDate getDob() {return dob;}
++    public void setDob(LocalDate dob) {this.dob = dob;}
++
++}
+Index: src/test/java/com/otabekov/simplecrud/SimplecrudApplicationTests.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/com/otabekov/simplecrud/SimplecrudApplicationTests.java b/src/test/java/com/otabekov/simplecrud/SimplecrudApplicationTests.java
+new file mode 100644
+--- /dev/null	(date 1731041757304)
++++ b/src/test/java/com/otabekov/simplecrud/SimplecrudApplicationTests.java	(date 1731041757304)
+@@ -0,0 +1,13 @@
++package com.otabekov.simplecrud;
++
++import org.junit.jupiter.api.Test;
++import org.springframework.boot.test.context.SpringBootTest;
++
++@SpringBootTest
++class SimplecrudApplicationTests {
++
++    @Test
++    void contextLoads() {
++    }
++
++}
+Index: src/main/java/com/otabekov/simplecrud/service/StudentService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/otabekov/simplecrud/service/StudentService.java b/src/main/java/com/otabekov/simplecrud/service/StudentService.java
+new file mode 100644
+--- /dev/null	(date 1731051923918)
++++ b/src/main/java/com/otabekov/simplecrud/service/StudentService.java	(date 1731051923918)
+@@ -0,0 +1,50 @@
++package com.otabekov.simplecrud.service;
++
++
++import com.otabekov.simplecrud.model.Student;
++import com.otabekov.simplecrud.reposistory.StudentReposistory;
++import jakarta.transaction.Transactional;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.stereotype.Service;
++
++import java.util.List;
++import java.util.Optional;
++
++@Service
++public class StudentService {
++
++    private final StudentReposistory studentReposistory;
++
++    @Autowired
++    public StudentService(StudentReposistory studentReposistory) {
++        this.studentReposistory = studentReposistory;
++    }
++
++    public List<Student> getAllStudents(){
++        return studentReposistory.findAll();
++    };
++
++    public void addNewStudent(Student student){
++        Optional<Student> findStudentBySurname = studentReposistory.findStudentBySurname(student.getSurname());
++        if(findStudentBySurname.isPresent()){
++            throw new IllegalArgumentException("Surname already exists");
++        }
++        studentReposistory.save(student);
++    }
++    public void deleteStudent(Long studentId) {
++        boolean exists = studentReposistory.existsById(studentId);
++        if (!exists) {
++            throw new IllegalArgumentException("Student with id " + studentId + " does not exist");
++        }
++        studentReposistory.deleteById(studentId);
++    }
++    @Transactional
++    public Student updateStudent(Long studentId, Student ustudent) {
++        Student existingStudent = studentReposistory.findById(studentId).orElseThrow(() -> new IllegalArgumentException("Student with id " + studentId + " does not exist"));
++        existingStudent.setName(ustudent.getName());
++        existingStudent.setSurname(ustudent.getSurname());
++        existingStudent.setDob(ustudent.getDob());
++        return studentReposistory.save(existingStudent);
++    }
++
++}
+Index: .mvn/wrapper/maven-wrapper.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/.mvn/wrapper/maven-wrapper.properties b/.mvn/wrapper/maven-wrapper.properties
+new file mode 100644
+--- /dev/null	(date 1731041737202)
++++ b/.mvn/wrapper/maven-wrapper.properties	(date 1731041737202)
+@@ -0,0 +1,19 @@
++# Licensed to the Apache Software Foundation (ASF) under one
++# or more contributor license agreements.  See the NOTICE file
++# distributed with this work for additional information
++# regarding copyright ownership.  The ASF licenses this file
++# to you under the Apache License, Version 2.0 (the
++# "License"); you may not use this file except in compliance
++# with the License.  You may obtain a copy of the License at
++#
++#   http://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing,
++# software distributed under the License is distributed on an
++# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
++# KIND, either express or implied.  See the License for the
++# specific language governing permissions and limitations
++# under the License.
++wrapperVersion=3.3.2
++distributionType=only-script
++distributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.9/apache-maven-3.9.9-bin.zip

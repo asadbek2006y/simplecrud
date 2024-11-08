@@ -1,0 +1,280 @@
+PUT http://localhost:8080/api/v1/student/1
+Content-Type: application/json
+Content-Length: 92
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 3,
+  "name": "Ozodbek",
+  "surname": "Amirov",
+  "dob": "2007-09-18",
+  "age": 0
+}
+
+<> 2024-11-08T124412.200.json
+
+###
+
+PUT http://localhost:8080/api/v1/student/1
+Content-Type: application/json
+Content-Length: 92
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 3,
+  "name": "Ozodbek",
+  "surname": "Amirov",
+  "dob": "2007-09-18",
+  "age": 0
+}
+
+<> 2024-11-08T124341.405.json
+
+###
+
+PUT http://localhost:8080/api/v1/student/1
+Content-Type: application/json
+Content-Length: 92
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 3,
+  "name": "Ozodbek",
+  "surname": "Amirov",
+  "dob": "2007-09-18",
+  "age": 0
+}
+
+<> 2024-11-08T124246.405.json
+
+###
+
+PUT http://localhost:8080/api/v1/student/1
+Content-Type: application/json
+Content-Length: 92
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 2,
+  "name": "Ozodbek",
+  "surname": "Amirov",
+  "dob": "2007-09-18",
+  "age": 0
+}
+
+<> 2024-11-08T124240.405.json
+
+###
+
+PUT http://localhost:8080/api/v1/student/1
+Content-Type: application/json
+Content-Length: 92
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 1,
+  "name": "Ozodbek",
+  "surname": "Amirov",
+  "dob": "2007-09-18",
+  "age": 0
+}
+
+<> 2024-11-08T124229.405.json
+
+###
+
+PUT http://localhost:8080/api/v1/student/1
+Content-Type: application/json
+Content-Length: 92
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 0,
+  "name": "Ozodbek",
+  "surname": "Amirov",
+  "dob": "2007-09-18",
+  "age": 0
+}
+
+<> 2024-11-08T124105.405.json
+
+###
+
+DELETE http://localhost:8080/api/v1/student/2
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-08T123004.500.json
+
+###
+
+DELETE http://localhost:8080/api/v1/student/2
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+DELETE http://localhost:8080/api/v1/student/2
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-08T122623.404.json
+
+###
+
+DELETE http://localhost:8080/api/v1/student/3
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-08T122618.404.json
+
+###
+
+DELETE http://localhost:8080/api/v1/student/1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-08T122612.404.json
+
+###
+
+POST http://localhost:8080/api/v1/student
+Content-Type: application/json;
+Content-Length: 71
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Asadbek",
+  "surname": "Otabekov",
+  "dob": "2002-01-14"
+}
+
+<> 2024-11-08T121849.500.json
+
+###
+
+POST http://localhost:8080/api/v1/student
+Content-Type: application/json;
+Content-Length: 71
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Asadbek",
+  "surname": "Otabekov",
+  "dob": "2002-01-14"
+}
+
+###
+
+POST http://localhost:8080/api/v1/student/student
+Content-Type: application/json
+Content-Length: 72
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Asadbek",
+  "surname": "Otabekov",
+  "dob": "2002-01-15",
+}
+
+<> 2024-11-08T120008.400.json
+
+###
+
+POST http://localhost:8080/api/v1/student/student
+Content-Type: application/json
+Content-Length: 69
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 0,
+  "name": "",
+  "surname": "",
+  "dob": "",
+  "age": 0
+}
+
+###
+
+POST http://localhost:8080/api/v1/student
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-08T120008.405.json
+
+###
+
+POST http://localhost:8080/api/v1/student
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-08T115754.405.json
+
+###
+
+POST http://localhost:8080/api/v1/student
+Content-Type: applicatio
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-08T115651.405.json
+
+###
+
+POST http://localhost:8080/api/v1/student
+Content-Type: applicatio
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-08T115641.405.json
+
+###
+
+POST http://localhost:8080/api/v1/student
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-08T114640.405.json
+
+###
+
